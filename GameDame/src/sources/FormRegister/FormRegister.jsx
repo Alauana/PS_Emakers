@@ -1,6 +1,6 @@
-import React from "react";
+import React from "react"
 import './FormRegister.css'
-import EastIcon from '@mui/icons-material/East';
+import EastIcon from '@mui/icons-material/East'
 
 function FormRegister() {
     return (
@@ -29,7 +29,7 @@ function FormRegister() {
 
                         <div className="arrow">
                             <button className="next">
-                                <EastIcon>East</EastIcon>
+                                <EastIcon fontSize="inherit"/>
                             </button>
                         </div>
                     </form>
