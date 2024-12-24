@@ -1,6 +1,5 @@
-import React from "react";
-import './FormRegister.css';
-import EastIcon from '@mui/icons-material/East';
+import './Forms.css'
+import EastIcon from '@mui/icons-material/East'
 
 function FormLogin() {
     return (

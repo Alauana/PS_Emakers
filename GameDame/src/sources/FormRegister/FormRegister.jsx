@@ -1,8 +1,21 @@
-import React from "react"
-import './FormRegister.css'
+import { useState } from 'react'
+import './Forms.css'
 import EastIcon from '@mui/icons-material/East'
 
 function FormRegister() {
+    const [cpf, setCpf] = useState("");
+
+    const CPFmask = (event) => {
+        let value = event.target.value;
+        value = value.replace(/\D/g, "");
+        if (value.length <= 11) {
+            value = value.replace(/(\d{3})(\d{3})(\d{3})(\d{2})/, (match, p1, p2, p3, p4) =>
+                `${p1}.${p2}.${p3}-${p4}`
+            );
+        }
+        setCpf(value);
+    };
+
     return (
         <div id="container">
             <div className="registerPage">
@@ -18,7 +31,7 @@ function FormRegister() {
                             <input type="email" placeholder="E-mail"/>
                         </div>
                         <div className="input-block">
-                            <input type="text" placeholder="CPF"/>
+                            <input type="text" value={cpf} onChange={CPFmask} maxLength="14" placeholder="CPF"/>
                         </div>
                         <div className="input-block">
                             <input type="text" placeholder="Senha"/>

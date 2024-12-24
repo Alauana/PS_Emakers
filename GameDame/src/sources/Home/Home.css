@@ -1,0 +1,16 @@
+.homePage{
+    display: flex;
+    flex-direction: row;
+}
+
+.games{
+    background-color: #4B626C;
+}
+
+.carrinho button{
+    transform: scaleX(-1);
+    color: #FFFFFF;
+    background: none;
+    border-radius: 50%;
+    border-color: #FFFFFF;
+}
