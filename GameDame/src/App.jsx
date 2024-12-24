@@ -5,7 +5,7 @@ import './App.css'
 import FormRegister from './sources/FormRegister/FormRegister'
 import FormLogin from './sources/FormRegister/FormLogin'
 import FormPassword from './sources/FormRegister/FormPassword'
-import Home from './sources/Home/Home'
+import AccountPage from './sources/AccountPage/AccountPage'
 
 function App() {
   return (
@@ -14,7 +14,7 @@ function App() {
         <Route exact path="/" element={ <FormLogin /> }/>
         <Route path="/registrar" element={ <FormRegister /> }/>
         <Route path="/recuperar" element={ <FormPassword /> }/>
-        <Route path="/home" element={ <Home /> }/>
+        <Route path="/conta" element={ <AccountPage /> }/>
       </Routes>
     </BrowserRouter>
   );

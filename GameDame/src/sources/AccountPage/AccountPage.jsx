@@ -1,12 +1,12 @@
-import './Home.css'
+import './AccountPage.css'
 import EditIcon from '@mui/icons-material/Edit';
 import DeleteForeverIcon from '@mui/icons-material/DeleteForever';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 
-function Home() {
+function AccountPage() {
     return (
         <div id="container">
-            <div className="homePage">
+            <div className="AccountPage">
                 <div className="dados">
                     <div className="text">
                         <h1>Olá, Usuário</h1>
@@ -50,4 +50,4 @@ function Home() {
     )
 }
 
-export default Home
+export default AccountPage
