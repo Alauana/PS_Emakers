@@ -85,6 +85,14 @@ main .loginUp button{
   margin-top: 1rem;
 }
 
+.arrow .next{
+  transition-duration: 0.4s;
+}
+
+.arrow .next:hover{
+  opacity: 0.2;
+}
+
 .loginUp{
   margin-left: 1.75rem;
   position: fixed;
