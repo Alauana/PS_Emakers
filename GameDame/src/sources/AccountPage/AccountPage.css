@@ -10,16 +10,18 @@
 .dados{
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
     box-sizing: border-box;
-    padding: 10rem;
     position: fixed;
-    left: 0%;
+    top: 15%;
+    left: 10%;
     width: 60%;
 }
 
 .text{
     display: flex;
     flex-direction: column;
+    align-items: initial;
     color: #4B626C;
 }
 
@@ -43,6 +45,10 @@
     margin-top: 5%;
 }
 
+.buttons .admin{
+    opacity: 0.5;
+}
+
 .buttons button{
     display: flex;
     align-items: center;
@@ -50,7 +56,7 @@
     color: #FBF6F0;
     border: none;
     border-radius: 10px;
-    margin-top: 5%;
+    margin-top: 10%;
     font-size: 1.8rem;
     font-weight: 400;
     width: 15rem;
@@ -79,7 +85,7 @@
     background-color: #4B626C;
     display: flex;
     flex-direction: column;
-    padding: 5%;
+    padding: 5% 5% 0% 5%;
     position: absolute;
     right: 0%;
     width: 40%;
@@ -150,10 +156,6 @@
         align-items: column;
     }
 
-    .dados{
-        padding: 10%;
-    }
-
     .text h1{
         font-size: 1.5rem;
     }
@@ -192,7 +194,8 @@
         align-items: center;
         text-align: center;
         width: 100%;
-        top: 10%;
+        left: 0%;
+        height: 50%;
     }
 
     .adquiridos{
@@ -209,7 +212,7 @@
     }
 
     .legend{
-        font-size: 2rem;
+        font-size: 2.5rem;
     }
 
     .carrinho button{

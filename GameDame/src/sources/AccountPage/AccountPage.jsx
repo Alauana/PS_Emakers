@@ -1,7 +1,7 @@
 import './AccountPage.css'
-import EditIcon from '@mui/icons-material/Edit';
-import DeleteForeverIcon from '@mui/icons-material/DeleteForever';
-import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
+import EditIcon from '@mui/icons-material/Edit'
+import DeleteForeverIcon from '@mui/icons-material/DeleteForever'
+import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined'
 
 function AccountPage() {
     return (
@@ -26,7 +26,9 @@ function AccountPage() {
                                 <DeleteForeverIcon fontSize='inherit'/> 
                             </div>
                         </button>
-                        <button className='admin'>Tela do admin</button>
+                        <button className='admin'>
+                            Tela do admin
+                        </button>
                     </div>
                 </div>
 
