@@ -1,11 +1,24 @@
 import './AccountPage.css'
+import { useNavigate } from 'react-router-dom'
 import EditIcon from '@mui/icons-material/Edit'
 import DeleteForeverIcon from '@mui/icons-material/DeleteForever'
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined'
+import Navbar from "../NavBar/NavBar"
 
 function AccountPage() {
+    const nav = useNavigate();
+
+    const clicktoAdmin = () => {
+        nav('/admin')
+    }
+
+    const clicktoCart = () => {
+        nav('/carrinho')
+    }
+
     return (
         <div id="container">
+            <Navbar />
             <div className="AccountPage">
                 <div className="dados">
                     <div className="text">
@@ -26,7 +39,7 @@ function AccountPage() {
                                 <DeleteForeverIcon fontSize='inherit'/> 
                             </div>
                         </button>
-                        <button className='admin'>
+                        <button className='admin' onClick={clicktoAdmin}>
                             Tela do admin
                         </button>
                     </div>
@@ -55,7 +68,7 @@ function AccountPage() {
                     </div>
                 
                     <div className="carrinho">
-                        <button className="carrinho"><ShoppingCartOutlinedIcon fontSize='large'/></button>
+                        <button className="carrinho" onClick={clicktoCart}><ShoppingCartOutlinedIcon fontSize='large'/></button>
                     </div>
                 </div>
             </div>    

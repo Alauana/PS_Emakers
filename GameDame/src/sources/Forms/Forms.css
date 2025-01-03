@@ -47,14 +47,22 @@ form .input-block input{
   font-weight: 300;
 }
 
+form .input-block a{
+  display: none;
+  color: #4B626C;
+  font-size: 1rem;
+}
+
 main .loginUp button{
   font-family: 'Montserrat', sans-serif;
   font-weight: 500;
 }
 
 .input-block{
+  display: flex;
+  flex-direction: column;
   width: 100%;
-  margin-top: 2.5rem;
+  margin-top: 2rem;
 }
 
 .input-block input{
@@ -67,7 +75,6 @@ main .loginUp button{
   box-sizing: border-box;
   justify-content: start;
   box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.25);
-
 }
 
 .arrow{

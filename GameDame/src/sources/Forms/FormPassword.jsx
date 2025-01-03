@@ -1,7 +1,18 @@
+import { useNavigate } from 'react-router-dom'
 import './Forms.css'
 import EastIcon from '@mui/icons-material/East'
 
 function FormPassword() {
+    const nav = useNavigate();
+
+    const clicktoRegister = () => {
+        nav('/registrar')
+    }
+
+    const clicktoLogin = () => {
+        nav('/login')
+    }
+    
     return (
         <div id="container">
             <div className="registerPage">
@@ -21,8 +32,8 @@ function FormPassword() {
                     </form>
 
                     <div className="loginUp">
-                        <button name="createAccount">Criar Conta</button>
-                        <button name="login">Fazer Login</button>
+                        <button name="createAccount" onClick={clicktoRegister}>Criar Conta</button>
+                        <button name="login" onClick={clicktoLogin}>Fazer Login</button>
                     </div>
                 </main>
 

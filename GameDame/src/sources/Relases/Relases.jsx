@@ -1,9 +1,19 @@
 import "./Relases.css"
+import { useNavigate } from "react-router-dom"
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined'
+import Navbar from "../NavBar/NavBar"
+import Footer from "../Footer/Footer"
 
 function Relases() {
+    const nav = useNavigate();
+
+    const clicktoCart = () => {
+        nav('/carrinho')
+    }
+
     return (
         <div className="container">
+            <Navbar />
             <div className="popular">
                 <h1>Populares</h1>
                 <div className="gameLeft">
@@ -37,9 +47,10 @@ function Relases() {
                     </div>
                 </div>
                 <div className="button">
-                    <button className="carrinho"><ShoppingCartOutlinedIcon fontSize="large"/></button>
+                    <button className="carrinho" onClick={clicktoCart}><ShoppingCartOutlinedIcon fontSize="large"/></button>
                 </div>
             </div>
+            <Footer />
         </div>
     )
 }
