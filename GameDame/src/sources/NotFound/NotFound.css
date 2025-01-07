@@ -1,80 +1,80 @@
 .NotFound{
-    flex: 1;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    color: #4B626C;
-    width: 100%;
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  color: #4B626C;
+  width: 100%;
 }
 
 .error-message{
-    display: flex;
-    flex-direction: column;
-    font-size: 2rem;
-    width: 40%;
-    margin: 0%;
+  display: flex;
+  flex-direction: column;
+  font-size: 2rem;
+  width: 40%;
+  margin: 0%;
 }
 
 .ops{
-    font-size: 6rem;
-    font-weight: 700;
+  font-size: 6rem;
+  font-weight: 700;
 }
 
 .error-message button{
-    background-color: #FBF8F3;
-    border-radius: 5px;
-    border: solid #4B626C;
-    cursor: pointer;
-    color: #4B626C;
-    width: 50%;
-    padding: 1rem;
-    font-size: 1.5rem;
-    margin-top: 5%;
-    transition-duration: 0.4s;
+  background-color: #FBF8F3;
+  border-radius: 5px;
+  border: solid #4B626C;
+  cursor: pointer;
+  color: #4B626C;
+  width: 50%;
+  padding: 1rem;
+  font-size: 1.5rem;
+  margin-top: 5%;
+  transition-duration: 0.4s;
 }
 
 .error-message button:hover{
-    background-color: #4B626C;
-    color: #FBF8F3;
+  background-color: #4B626C;
+  color: #FBF8F3;
 }
 
 .NotFound img{
-    width: 500px;
+  width: 500px;
 }
 
 @media (max-width: 800px){
-    .NotFound{
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
+  .NotFound{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 
-    .error-message{
-        width: 80%;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-    }
+  .error-message{
+    width: 80%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
 }
 
 @media (max-width: 500px){
-    .error-message{
-        font-size: 1.5rem;
-    }
+  .error-message{
+      font-size: 1.5rem;
+  }
 
-    .error-message button{
-        font-size: 1rem;
-        width: 80%;
-    }
+  .error-message button{
+    font-size: 1rem;
+    width: 80%;
+  }
 
-    .ops{
-        font-size: 4rem;
-    }
+  .ops{
+    font-size: 4rem;
+  }
 
-    .NotFound img{
-        width: 250px;
-    }
+  .NotFound img{
+    width: 250px;
+  }
 }

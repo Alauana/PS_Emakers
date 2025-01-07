@@ -1,0 +1,53 @@
+.carrossel-main{
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20%;
+  height: 50%;
+}
+
+.swiper-slide img{
+  width: 80%;
+  height: 100%;
+  object-fit: cover;
+  margin-left: 10%;
+}
+
+.text{
+  display: flex;
+  flex-direction: row;
+  font-size: 1rem;
+  font-weight: 600;
+  position: relative;
+  bottom: 3rem;
+  left: -9rem;
+}
+
+.text .promo{
+  background-color: #4B626C;
+  color: #FCFAFA;
+  padding: 0.5% 1%;
+  border-radius: 5px;
+}
+
+.text .value{
+  background-color: #FCFAFA;
+  color: #4B626C;
+  padding: 0.5% 1%;
+  border-radius: 5px;
+  margin-left: 2%;
+}
+
+.carrossel-main .swiper-button-next, .carrossel-main .swiper-button-prev{
+  color: #97A4A2;
+  padding: 10px;
+}
+
+.swiper-pagination-bullet{
+  background-color: #fff;
+  opacity: 0.7;
+}
+
+.swiper-pagination-bullet-active{
+  background-color: #000;
+}

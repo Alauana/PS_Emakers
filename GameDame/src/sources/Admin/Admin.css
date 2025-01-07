@@ -1,173 +1,173 @@
 .admin{
-    flex: 1;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    margin: 0%;
-    padding: 0%;
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 0%;
+  padding: 0%;
 }
 
 .register-game, .delete-game, .edit-game{
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    min-height: 100%;
-    margin-top: 100px;
-    margin-bottom: 0%;
-    padding: 0%;
-    width: 100%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  margin-top: 100px;
+  margin-bottom: 0%;
+  padding: 0%;
+  width: 100%;
 }
 
 .register-game legend, .delete-game legend, .edit-game legend{
-    font-size: 2rem;
-    font-weight: 600;
+  font-size: 2rem;
+  font-weight: 600;
 }
 
 .register-game .input-register input, .delete-game .input-delete input, .edit-game .input-edit input{
-    text-align: center;
-    width: 20rem;
-    font-size: 1.25rem;
-    border: none;
-    margin-bottom: 2rem;
-    border-radius: 5px;
-    padding: 2%;
+  text-align: center;
+  width: 20rem;
+  font-size: 1.25rem;
+  border: none;
+  margin-bottom: 2rem;
+  border-radius: 5px;
+  padding: 2%;
 }
 
 .register-game .input-register input, .edit-game .input-edit input{
-    background-color: #EFEFEF;
-    color: #97A4A2;
+  background-color: #EFEFEF;
+  color: #97A4A2;
 }
 
 .register-game .input-register input::placeholder, .edit-game .input-edit input::placeholder{
-    color: #97A4A2;
-    font-weight: 300;
+  color: #97A4A2;
+  font-weight: 300;
 }
 
 .register-game button, .delete-game button, .edit-game button{
-    font-size: 1.8rem;
-    border: none;
-    font-weight: 400;
-    border-radius: 10px;
-    padding: 5% 40%;
-    margin-left: -35%;
-    transition-duration: 0.4s;
-    cursor: pointer;
+  font-size: 1.8rem;
+  border: none;
+  font-weight: 400;
+  border-radius: 10px;
+  padding: 5% 40%;
+  margin-left: -35%;
+  transition-duration: 0.4s;
+  cursor: pointer;
 }
 
 .register-game, .edit-game{
-    background-color: #4B626C;
-    padding-top: 15%;
+  background-color: #4B626C;
+  padding-top: 15%;
 }
 
 .register-game legend, .edit-game legend{
-    color: #FBF6F0;
-    padding: 0%;
+  color: #FBF6F0;
+  padding: 0%;
 }
 
 .register-game form, .edit-game form{
-    margin-top: -45%;
+  margin-top: -45%;
 }
 
 .register-game button, .edit-game button{
-    color: #606060;
-    background-color: #FFFFFF;
+  color: #606060;
+  background-color: #FFFFFF;
 }
 
 .register-game button:hover, .edit-game button:hover{
-    color: #FFFFFF;
-    text-decoration: underline;
-    background-color: #4B626C;
-    margin-top: -1rem;
+  color: #FFFFFF;
+  text-decoration: underline;
+  background-color: #4B626C;
+  margin-top: -1rem;
 }
 
 .register-game .input-register #description, .edit-game .input-edit #description{
-    padding-top: 20%;
-    padding-bottom: 20%;
+  padding-top: 20%;
+  padding-bottom: 20%;
 }
 
 .register-game{
-    position: absolute;
-    left: 0%;
-    width: 33%;
+  position: absolute;
+  left: 0%;
+  width: 33%;
 }
 
 .edit-game{
-    position: absolute;
-    right: 0%;
-    width: 33%;
+  position: absolute;
+  right: 0%;
+  width: 33%;
 }
 
 .delete-game{
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    padding-top: 15%;
-    position: absolute;
-    width: 33%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding-top: 15%;
+  position: absolute;
+  width: 33%;
 }
 
 .delete-game form{
-    margin-top: -107%;
+  margin-top: -107%;
 }
 
 .delete-game input, .delete-game button{
-    background-color: #4B626C;
-    color: #F3F3F3;
+  background-color: #4B626C;
+  color: #F3F3F3;
 }
 
 .delete-game button{
-    transition-duration: 0.4s;
+  transition-duration: 0.4s;
 }
 
 .delete-game button:hover{
-    opacity: 0.85;
-    text-decoration: underline;
-    margin-top: -1rem;
+  opacity: 0.85;
+  text-decoration: underline;
+  margin-top: -1rem;
 }
 
 .delete-game input::placeholder{
-    color: #FFFFFF;
+  color: #FFFFFF;
 }
 
 @media (max-width: 1100px){
-    .admin{
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-    }
+  .admin{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
 
-    .register-game, .delete-game, .edit-game{
-        min-width: 100%;
-        right: 0%;
-        left: 0%;
-    }
+  .register-game, .delete-game, .edit-game{
+    min-width: 100%;
+    right: 0%;
+    left: 0%;
+  }
 
-    
-    .register-game form, .delete-game form, .edit-game form{
-        margin-top: 0%;
-    }
+  
+  .register-game form, .delete-game form, .edit-game form{
+    margin-top: 0%;
+  }
 
-    .delete-game{
-        top: 100%;
-        z-index: 100;
-    }
+  .delete-game{
+    top: 100%;
+    z-index: 100;
+  }
 
-    .edit-game{
-        margin-top: 500%;
-        height: 20%;
-    }
+  .edit-game{
+    margin-top: 500%;
+    height: 20%;
+  }
 }
 
 @media (max-width: 760px){
-    .admin{
-        margin-top: 60px;
-    }
+  .admin{
+    margin-top: 60px;
+  }
 
 }
 
 @media (max-width: 640px){
-    .edit-game{
-        margin-top: 700%;
-    }
+  .edit-game{
+    margin-top: 700%;
+  }
 }

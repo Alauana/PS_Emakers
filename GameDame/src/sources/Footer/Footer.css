@@ -1,128 +1,128 @@
 .container{
-    margin: 0%;
-    padding: 0%;
+  margin: 0%;
+  padding: 0%;
 }
 
 footer{
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    box-sizing: border-box;    
-    background-color: #97A4A2;
-    padding: 3% 0% 1% 0%;
-    min-width: 100%;
-    max-width: 1200px;
-    position: absolute;
-    left: 0%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;    
+  background-color: #97A4A2;
+  padding: 3% 0% 1% 0%;
+  min-width: 100%;
+  max-width: 1200px;
+  position: absolute;
+  left: 0%;
 }
 
 .info{
-    flex: 1;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    color: #FBF8F3;
-    width: 100%;
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: #FBF8F3;
+  width: 100%;
 }
 
 .by{
-    margin-top: 8%;
-    color: #4B626C;
-    font-size: 1rem;
+  margin-top: 8%;
+  color: #4B626C;
+  font-size: 1rem;
 }
 
 .game-dame{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .explorer, .explorer .links{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 0%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0%;
 }
 
 .contacts{
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .info .logo img{
-    width: 164px;
-    border-radius: 5px;
+  width: 164px;
+  border-radius: 5px;
 }
 
 .explorer .links button, .explorer .links a{
-    background: none;
-    border: none;
-    color: #FBF8F3;
-    cursor: pointer;
-    font-size: 2rem;
-    font-weight: 400;
+  background: none;
+  border: none;
+  color: #FBF8F3;
+  cursor: pointer;
+  font-size: 2rem;
+  font-weight: 400;
 }
 
 .info .game-dame h3{
-    font-weight: 700;
-    font-size: 2.25rem;
-    margin-bottom: 0%;
+  font-weight: 700;
+  font-size: 2.25rem;
+  margin-bottom: 0%;
 }
 
 .info .game-dame p{
-    font-weight: 300;
-    font-size: 2rem;
+  font-weight: 300;
+  font-size: 2rem;
 }
 
 .info h4{
-    font-weight: 500;
-    font-size: 2.25rem;
-    margin-bottom: 0%;
+  font-weight: 500;
+  font-size: 2.25rem;
+  margin-bottom: 0%;
 }
 
 .info .explorer h4{
-    margin-bottom: 5%;
+  margin-bottom: 5%;
 }
 
 .info .contacts .contato{
-    font-size: 1.5rem;
-    font-weight: 400;
-    margin-top: 2%;
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin-top: 2%;
 }
 
 .game-dame, .explorer, .contacts{
-    margin-left: 5%;
+  margin-left: 5%;
 }
 
 .explorer .links .inicio::after{
-    transition: margin-top 250ms;
-    margin-top:-8px;
+  transition: margin-top 250ms;
+  margin-top:-8px;
 }
 
 @media (max-width: 1024px){
-    .game-dame, .explorer, .contacts h4{
-        display: none;
-    }
+  .game-dame, .explorer, .contacts h4{
+    display: none;
+  }
 }
 
 @media (max-width: 600px){
-    .info .logo img{
-        width: 110px;
-    }
+  .info .logo img{
+    width: 110px;
+  }
 
-    .info .contacts .contato{
-        font-size: 1rem;
-    }
+  .info .contacts .contato{
+    font-size: 1rem;
+  }
 }
 
 @media (max-width: 400px){
-    .info .contacts .contato{
-        font-size: 0.7rem;
-    }
+  .info .contacts .contato{
+    font-size: 0.7rem;
+  }
 
-    .by{
-        font-size: 0.5rem;
-    }
+  .by{
+    font-size: 0.5rem;
+  }
 }

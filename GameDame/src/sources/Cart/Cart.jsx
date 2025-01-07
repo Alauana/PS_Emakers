@@ -1,13 +1,13 @@
 import './Cart.css'
 
 function Cart() {
-    return(
-        <div className="container">
-            <div className="cart">
+  return(
+    <div className="container">
+      <div className="cart">
 
-            </div>
-        </div>
-    )
+      </div>
+    </div>
+  )
 }
 
 export default Cart

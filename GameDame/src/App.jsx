@@ -1,11 +1,10 @@
-import React from 'react'
 import { BrowserRouter, Route, Routes } from "react-router-dom"
 import './App.css'
 
 import FormRegister from './sources/Forms/FormRegister'
 import FormLogin from './sources/Forms/FormLogin'
 import FormPassword from './sources/Forms/FormPassword'
-import Relases from './sources/Relases/Relases'
+import Releases from './sources/Releases/Releases'
 import AccountPage from './sources/AccountPage/AccountPage'
 import Home from './sources/Home/Home'
 import Admin from './sources/Admin/Admin'
@@ -21,7 +20,7 @@ function App() {
         <Route path="/lancamentos" element={ <Home />}/>
         <Route path="/registrar" element={ <FormRegister /> }/>
         <Route path="/recuperar" element={ <FormPassword /> }/>
-        <Route path="/populares" element={ <Relases /> }/>
+        <Route path="/populares" element={ <Releases /> }/>
         <Route path="/conta" element={ <AccountPage /> }/>
         <Route path="/admin" element={ <Admin /> }/>
         <Route path="/carrinho" element={ <Cart /> }/>

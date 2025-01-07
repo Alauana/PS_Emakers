@@ -1,0 +1,58 @@
+.swiper-button-next, .swiper-button-prev {
+  color: #FFFFFF; 
+}
+
+.releases-container{
+  display: flex;
+  align-items: center; 
+  padding-left: 5%; 
+  box-sizing: border-box;
+}
+
+.image-text{
+  position: relative;
+  display: inline-block;
+}
+
+.price{
+  position: relative;
+  bottom: 2.25rem;
+  left: 1.5rem;
+  width: 4rem;
+  padding: 2%;
+  border-radius: 5px;
+  color: #4B626C;
+  background-color: #FCFAFA;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.image-text button{
+  background-color: #4B626C;
+  border: none;
+  color: #FCFAFA;
+  font-weight: 500;
+  font-size: 1rem;
+  cursor: pointer;
+  text-align: center;
+  position: absolute;
+  top: 40%;
+  bottom: 40%;
+  left: 10%;
+  right: 10%;
+  transition-duration: 0.4s;
+  opacity: 0;
+}
+
+.image-text:hover img{
+  opacity: 0.5;
+}
+
+.image-text:hover button{
+  opacity: 1;
+}
+
+.image-text button:hover{
+  background-color: #FCFAFA;
+  color: #4B626C;
+}

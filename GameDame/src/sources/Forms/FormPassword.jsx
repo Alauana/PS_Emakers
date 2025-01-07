@@ -38,7 +38,7 @@ function FormPassword() {
                 </main>
 
                 <div className="imagem">  
-                    <img src="../public/images/capa.svg" alt="banner" />
+                    <img src="/images/capa.svg" alt="banner" />
                 </div>
             </div>    
         </div>
