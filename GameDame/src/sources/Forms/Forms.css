@@ -49,8 +49,12 @@ form .input-block input{
 
 form .input-block a{
   display: none;
-  color: #4B626C;
+  color: red;
   font-size: 1rem;
+}
+
+form .input-block a.error {
+  display: block; 
 }
 
 main .loginUp button{

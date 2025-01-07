@@ -51,7 +51,7 @@
     top: 7%;
 }
 
-.text{
+.description{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -60,12 +60,12 @@
     max-width: 60%;
 }
 
-.text .name{
+.description .name{
     font-size: 2rem;
     font-weight: 600;
 }
 
-.text p{
+.description p{
     font-weight: 300;
     font-size: 1.25rem;
     text-align: justify;
@@ -73,11 +73,11 @@
     margin-top: 1%;
 }
 
-.gameLeft .text{
+.gameLeft .description{
     padding: 0% 0% 0% 5%;
 }
 
-.gameRight .text{
+.gameRight .description{
     padding: 0% 5% 0% 0%;
 }
 
@@ -149,7 +149,7 @@
         left: -2rem;
     }
 
-    .gameLeft .text, .gameRight .text{
+    .gameLeft .description, .gameRight .description{
         padding: 0%;
     }
 
@@ -186,11 +186,11 @@
         left: -1.5rem;
     }
 
-    .text .name{
+    .description .name{
         font-size: 1.3rem;
     }
 
-    .text p{
+    .description p{
         font-size: 0.7rem;
     }
 

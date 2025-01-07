@@ -18,21 +18,21 @@
   width: 60%;
 }
 
-.text{
+.infos{
   display: flex;
   flex-direction: column;
   align-items: initial;
   color: #4B626C;
 }
 
-.text h1{
+.infos h1{
   font-size: 3rem;
   font-weight: 500;
   margin-bottom: 2%;
   margin-left: 0%;
 }
 
-.text h2{
+.infos h2{
   font-size: 2rem;
   font-weight: 400;
   margin-bottom: 1%;
@@ -157,11 +157,11 @@
     margin-top: 60px;
   }
 
-  .text h1{
+  .infos h1{
     font-size: 1.5rem;
   }
 
-  .text h2{
+  .infos h2{
     font-size: 1.2rem;
   }
 
@@ -208,7 +208,7 @@
     max-width: 55%;
   }
 
-  .text h1, .text h2{
+  .infos h1, .infos h2{
     font-size: 1rem;
   }
 

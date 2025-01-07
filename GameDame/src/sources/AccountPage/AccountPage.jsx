@@ -1,30 +1,46 @@
 import './AccountPage.css'
 import { useNavigate } from 'react-router-dom'
+import { useEffect, useState } from 'react'
 import EditIcon from '@mui/icons-material/Edit'
 import DeleteForeverIcon from '@mui/icons-material/DeleteForever'
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined'
 import Navbar from "../NavBar/NavBar"
 
 function AccountPage() {
-  const nav = useNavigate();
+  const nav = useNavigate()
+  const [userData, setUserData] = useState(null)
 
-  const clicktoAdmin = () => {
-    nav('/admin')
+  useEffect(() => {
+    const loggedUser = JSON.parse(localStorage.getItem("loggedUser"))
+    const users = JSON.parse(localStorage.getItem("users")) || []
+    const user = users.find((u) => u.username === loggedUser)
+
+    if (user) {
+      setUserData(user)
+    } else {
+      nav("/login")
+    }
+  }, [nav])
+
+  const DeleteAccount = () => {
+    const users = JSON.parse(localStorage.getItem("users")) || []
+    const updatedUsers = users.filter((u) => u.username !== userData.username)
+    localStorage.setItem("users", JSON.stringify(updatedUsers))
+    localStorage.removeItem("loggedUser")
+    nav("/registrar")
   }
 
-  const clicktoCart = () => {
-    nav('/carrinho')
-  }
+  if (!userData) return null
 
   return (
     <div id="container">
       <Navbar />
       <div className="AccountPage">
         <div className="dados">
-          <div className="text">
-            <h1>Olá, Usuário</h1>
-            <h2>Seu email é user@email.com</h2>
-            <h2>Seu CPF é 000.000.000-00</h2>
+          <div className="infos">
+            <h1>Olá, {userData.username}</h1>
+            <h2>Seu email é {userData.email}</h2>
+            <h2>Seu CPF é {userData.cpf}</h2>
           </div>
           <div className="buttons">
             <button className='alterar'>
@@ -33,13 +49,13 @@ function AccountPage() {
                 <EditIcon fontSize='inherit'/>
               </div>
             </button>
-            <button className='excluir'>
+            <button className='excluir' onClick={DeleteAccount}>
               Excluir Conta 
               <div className="deleteIcon">
                 <DeleteForeverIcon fontSize='inherit'/> 
               </div>
             </button>
-            <button className='admin' onClick={clicktoAdmin}>
+            <button className='admin' onClick={() => nav('/admin')}>
               Tela do admin
             </button>
           </div>
@@ -68,7 +84,7 @@ function AccountPage() {
           </div>
         
           <div className="carrinho">
-            <button className="carrinho" onClick={clicktoCart}><ShoppingCartOutlinedIcon fontSize='large'/></button>
+            <button className="carrinho" onClick={() => nav('/carrinho')}><ShoppingCartOutlinedIcon fontSize='large'/></button>
           </div>
         </div>
       </div>    
