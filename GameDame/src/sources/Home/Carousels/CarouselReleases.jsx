@@ -45,34 +45,10 @@ const CarouselReleases = () => {
       price: "R$ 299,00"
     },
     {
-      image: "/images/bobEsponja.svg",
-      title: "Sponge Bob: Battle for BikiniBottom",
+      image: "/images/GodofWar.svg",
+      title: "God of War",
       platform: "PC",
-      price: "R$ 299,00"
-    },
-    {
-      image: "/images/Deliver.svg",
-      title: "Deliver us Mars",
-      platform: "PC",
-      price: "R$ 299,00"
-    },
-    {
-      image: "/images/SpellForce.svg",
-      title: "SpellForce",
-      platform: "PC",
-      price: "R$ 299,00"
-    },
-    {
-      image: "/images/deathStranding.svg",
-      title: "Death Stranding",
-      platform: "PC",
-      price: "R$ 299,00"
-    },
-    {
-      image: "/images/perish.svg",
-      title: "Perish",
-      platform: "PC",
-      price: "R$ 299,00"
+      price: "R$ 199,95"
     }
   ]
 
