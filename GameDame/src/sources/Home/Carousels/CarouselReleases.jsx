@@ -4,103 +4,105 @@ import 'swiper/css'
 import 'swiper/css/navigation'
 import 'swiper/css/pagination'
 import { Navigation } from 'swiper/modules'
+import { useCart } from '../../Cart/Context/Context'
 
 const CarouselReleases = () => {
+  const { addToCart } = useCart()
+
+  const handleBuyNow = (game) => {
+    addToCart(game)
+  }
+
+  const games = [
+    {
+      image: "/images/bobEsponja.svg",
+      title: "Sponge Bob: Battle for BikiniBottom",
+      platform: "PC",
+      price: "R$ 299,00"
+    },
+    {
+      image: "/images/Deliver.svg",
+      title: "Deliver us Mars",
+      platform: "PC",
+      price: "R$ 299,00"
+    },
+    {
+      image: "/images/SpellForce.svg",
+      title: "SpellForce",
+      platform: "PC",
+      price: "R$ 299,00"
+    },
+    {
+      image: "/images/deathStranding.svg",
+      title: "Death Stranding",
+      platform: "PC",
+      price: "R$ 299,00"
+    },
+    {
+      image: "/images/perish.svg",
+      title: "Perish",
+      platform: "PC",
+      price: "R$ 299,00"
+    },
+    {
+      image: "/images/bobEsponja.svg",
+      title: "Sponge Bob: Battle for BikiniBottom",
+      platform: "PC",
+      price: "R$ 299,00"
+    },
+    {
+      image: "/images/Deliver.svg",
+      title: "Deliver us Mars",
+      platform: "PC",
+      price: "R$ 299,00"
+    },
+    {
+      image: "/images/SpellForce.svg",
+      title: "SpellForce",
+      platform: "PC",
+      price: "R$ 299,00"
+    },
+    {
+      image: "/images/deathStranding.svg",
+      title: "Death Stranding",
+      platform: "PC",
+      price: "R$ 299,00"
+    },
+    {
+      image: "/images/perish.svg",
+      title: "Perish",
+      platform: "PC",
+      price: "R$ 299,00"
+    }
+  ]
+
   return (
     <div className="carrossel-releases" style={{ maxWidth: '1440px', margin: '0 auto' }}>
       <Swiper
-        className='releases-container'
-        navigation={true} 
-        loop={true} 
-        modules={[Navigation]} 
+        className="releases-container"
+        navigation={true}
+        loop={true}
+        modules={[Navigation]}
         breakpoints={{
-          0: {
-            slidesPerView: 1,
-            spaceBetween: 15,
-          },
-          780: {
-            slidesPerView: 3,
-            spaceBetween: 15,
-          },
-          1440: {
-            slidesPerView: 5,
-            spaceBetween: 5,
-          },
+          0: { slidesPerView: 1, spaceBetween: 15 },
+          780: { slidesPerView: 3, spaceBetween: 15 },
+          1440: { slidesPerView: 5, spaceBetween: 5 },
         }}
       >
-        <SwiperSlide>
-          <div className="image-text">
-            <img src="/images/bobEsponja.svg" alt="bob-esponja"/>
-            <div className="price">R$ 299,00</div>
-            <button>Comprar Agora</button>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="image-text">
-            <img src="/images/Deliver.svg" alt="deliver"/>
-            <div className="price">R$ 299,00</div>
-            <button>Comprar Agora</button>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="image-text">
-            <img src="/images/SpellForce.svg" alt="spellforce"/>
-            <div className="price">R$ 299,00</div>
-            <button>Comprar Agora</button>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="image-text">
-            <img src="/images/deathStranding.svg" alt="death-stranding"/>
-            <div className="price">R$ 299,00</div>
-            <button>Comprar Agora</button>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="image-text">
-            <img src="/images/perish.svg" alt="perish"/>
-            <div className="price">R$ 299,00</div>
-            <button>Comprar Agora</button>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="image-text">
-            <img src="/images/bobEsponja.svg" alt="bob-esponja"/>
-            <div className="price">R$ 299,00</div>
-            <button>Comprar Agora</button>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="image-text">
-            <img src="/images/Deliver.svg" alt="deliver"/>
-            <div className="price">R$ 299,00</div>
-            <button>Comprar Agora</button>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="image-text">
-            <img src="/images/SpellForce.svg" alt="spellforce"/>
-            <div className="price">R$ 299,00</div>
-            <button>Comprar Agora</button>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="image-text">
-            <img src="/images/deathStranding.svg" alt="death-stranding"/>
-            <div className="price">R$ 299,00</div>
-            <button>Comprar Agora</button>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="image-text">
-            <img src="/images/perish.svg" alt="perish"/>
-            <div className="price">R$ 299,00</div>
-            <button>Comprar Agora</button>
-          </div>
-        </SwiperSlide>
+        {games.map((game, index) => (
+          <SwiperSlide key={index}>
+            <div className="image-text">
+              <img src={game.image} alt={game.title.toLowerCase()} />
+              <div className="game-title">{game.title}</div>
+              <div className="plataform">Plataforma: {game.platform}</div>
+              <div className="price">{game.price}</div>
+              <button onClick={() => handleBuyNow(game)}>Comprar Agora</button>
+            </div>
+          </SwiperSlide>
+        ))}
       </Swiper>
     </div>
-  );
+  )
 }
 
 export default CarouselReleases
