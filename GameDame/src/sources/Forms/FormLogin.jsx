@@ -22,30 +22,28 @@ function FormLogin() {
     if (!formData.username) newErrors.username = "Campo obrigatório"
     if (!formData.password) newErrors.password = "Campo obrigatório"
 
+    // Recebe a lista de usuários
     const users = JSON.parse(localStorage.getItem("users")) || []
+    // Procura o usuário igual e a senha
     const user = users.find((u) => u.username === formData.username && u.password === formData.password)
 
+    // Se não encontrar retorna a mensagem de erro geral
     if (!user) {
       newErrors.general = "Usuário ou senha inválidos"
     }
 
+    // Atualiza o estado
     setErrors(newErrors)
+    // Retorna "true" se não houver erros
     return Object.keys(newErrors).length === 0
   }
 
   const Submit = (e) => {
     e.preventDefault()
     if (validateForm()) {
+      // Armazena os dados e encaminha para "conta"
       localStorage.setItem("loggedUser", JSON.stringify(formData.username))
       nav("/conta")
-    }
-  }
-
-  const Login = (event) => {
-    event.preventDefault()
-
-    if (validateLogin()) {
-      nav('/lancamentos')
     }
   }
 

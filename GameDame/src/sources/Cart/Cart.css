@@ -3,6 +3,7 @@
   display: flex;
   flex-direction: row;
   margin-top: 100px;
+  margin: 0;
 }
 
 .escolhidos{
@@ -60,7 +61,7 @@
   position: relative;
   top: 12rem;
   left: 15rem;
-  width: 30%;
+  width: 12rem;
 }
 
 .escolhidos .total{
@@ -180,13 +181,14 @@
 @media (max-width: 1100px){
   .cart {
     flex-direction: column;
-    margin: 0%;
-    min-width: 100%;
+    margin: 0;
+    width: 100%;
+    align-items: center;
   }
 
   .escolhidos{
     position: relative;
-    min-width: 100%;
+    width: 100%;
     margin-bottom: 8rem;
   }
 
@@ -204,20 +206,20 @@
   }
 
   .escolhidos .item .price{
-    left: 14rem;
+    left: 6rem;
   }
 
 }
 
 @media (max-width: 660px){
-  .escolhidos .item .price{
-    left: 10rem;
-  }
-
-  .escolhidos{
+   .escolhidos{
     top: 60px;
     width: 100%;
     align-items: center;
+  }
+
+  .escolhidos .item .price{
+    left: 10rem;
   }
 
   .escolhidos .item .game-title{

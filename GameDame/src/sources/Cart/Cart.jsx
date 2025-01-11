@@ -1,11 +1,12 @@
-import './Cart.css';
-import Navbar from "../NavBar/NavBar";
-import PaymentIcon from '@mui/icons-material/Payment';
-import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
-import { useCart } from './Context/Context';
+import './Cart.css'
+import Navbar from "../NavBar/NavBar"
+import PaymentIcon from '@mui/icons-material/Payment'
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart'
+import { useCart } from './Context/Context'
 
 function Cart() {
-  const { cart, total } = useCart();
+  // Retorna os objetos cart e total
+  const { cart, total } = useCart()
 
   return (
     <div className="container">
@@ -51,7 +52,7 @@ function Cart() {
         </div>
       </div>
     </div>
-  );
+  )
 }
 
-export default Cart;
+export default Cart

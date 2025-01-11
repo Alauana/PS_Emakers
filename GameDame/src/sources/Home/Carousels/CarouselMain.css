@@ -8,9 +8,15 @@
 
 .swiper-slide img{
   width: 80%;
-  height: 100%;
+  height: 550px;
   object-fit: cover;
   margin-left: 10%;
+  cursor: pointer;
+  transition-duration: 0.4s;
+}
+
+.swiper-slide img:hover{
+  height: 600px;
 }
 
 .text{

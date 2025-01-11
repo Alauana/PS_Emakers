@@ -7,29 +7,41 @@ import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined'
 import Navbar from "../NavBar/NavBar"
 
 function AccountPage() {
+  // Direcionamento
   const nav = useNavigate()
+  // userData inicia com "null" e guarda os dados de quem logou
   const [userData, setUserData] = useState(null)
 
   useEffect(() => {
+    // Obtem o usuário
     const loggedUser = JSON.parse(localStorage.getItem("loggedUser"))
+    // Obtem a lista
     const users = JSON.parse(localStorage.getItem("users")) || []
+    // Procura o usuário na lista
     const user = users.find((u) => u.username === loggedUser)
 
+    // Se encontrado, dados armazenados, senão, direciona para /login
     if (user) {
       setUserData(user)
     } else {
       nav("/login")
     }
-  }, [nav])
+  }, [nav]) // Este efeito só é executado se a função nav mudar
 
+  // Função para excluir conta
   const DeleteAccount = () => {
+    // Obtem usuario
     const users = JSON.parse(localStorage.getItem("users")) || []
+    // Cria uma lista nova e exclui o usuario logado e seus dados
     const updatedUsers = users.filter((u) => u.username !== userData.username)
+    // Atualiza a lista (Substitui)
     localStorage.setItem("users", JSON.stringify(updatedUsers))
+    // Remove o usuário e encaminha para registrar
     localStorage.removeItem("loggedUser")
     nav("/registrar")
   }
 
+  // Se userData for inválido não haverá renderização
   if (!userData) return null
 
   return (

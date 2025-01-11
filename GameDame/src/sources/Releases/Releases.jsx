@@ -5,6 +5,7 @@ import Navbar from "../NavBar/NavBar"
 import Footer from "../Footer/Footer"
 
 function Releases() {
+  // Direcionamento
   const nav = useNavigate();
 
   const clicktoCart = () => {

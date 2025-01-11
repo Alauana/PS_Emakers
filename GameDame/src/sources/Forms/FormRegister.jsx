@@ -4,6 +4,7 @@ import './Forms.css'
 import EastIcon from '@mui/icons-material/East'
 
 function FormRegister() {
+  // Objeto formData iniciando com campos vazios atualizados pela função setFormData
   const [formData, setFormData] = useState({
     username: "",
     email: "",
@@ -11,11 +12,17 @@ function FormRegister() {
     password: "",
     confirmPassword: "",
   })
+  // O estado errors irá armazenar uma mensagem de erro e setErrors atualiza este estado
   const [errors, setErrors] = useState({})
+  
+  // Direcionamento
   const nav = useNavigate()
 
+  // Máscara para CPF
   const Change = (e) => {
+    // Obtem o id e o value
     const { id, value } = e.target
+    // se o evento tiver sido disparado no id "cpf", remove caracteres não numéricos e a máscara é aplicada
     if (id === "cpf") {
       let maskedValue = value.replace(/\D/g, "")
       if (maskedValue.length <= 11) {
@@ -27,6 +34,7 @@ function FormRegister() {
     }
   }
 
+  // Esta função faz a verificação dos campos do objeto formData
   const validateForm = () => {
     const newErrors = {}
 
@@ -44,13 +52,19 @@ function FormRegister() {
       newErrors.confirmPassword = "As senhas não conferem"
     }
 
+    // O estado de errors é atualizado pelo newErrors, se algum campo estiver vazio, retorna uma mensagem de erro
     setErrors(newErrors)
+    // Retorna "true" se não houver nenhum erro
     return Object.keys(newErrors).length === 0
   }
 
+  // Função para validar os dados do formulário
   const Submit = (e) => {
+    // Evita o recarregamento
     e.preventDefault()
+    // Recebe a função de validação e verifica. Se for válida retorna "true"
     if (validateForm()) {
+      // obtem a lista de localStorage ou cria uma lista vazia onde são adicionados os dados
       const users = JSON.parse(localStorage.getItem("users")) || []
       users.push({
         username: formData.username,
@@ -59,6 +73,7 @@ function FormRegister() {
         password: formData.password,
       })
       localStorage.setItem("users", JSON.stringify(users))
+      // Redireciona para a página de login
       nav("/login")
     }
   }

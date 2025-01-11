@@ -7,9 +7,11 @@ import { Navigation } from 'swiper/modules'
 import { useCart } from '../../Cart/Context/Context'
 
 const CarouselReleases = () => {
+  // Retorna o objeto addToCart
   const { addToCart } = useCart()
 
-  const handleBuyNow = (game) => {
+  // Recebe o game e passa para a addToCart
+  const BuyNow = (game) => {
     addToCart(game)
   }
 
@@ -72,7 +74,7 @@ const CarouselReleases = () => {
               <div className="game-title">{game.title}</div>
               <div className="plataform">Plataforma: {game.platform}</div>
               <div className="price">{game.price}</div>
-              <button onClick={() => handleBuyNow(game)}>Comprar Agora</button>
+              <button onClick={() => BuyNow(game)}>Comprar Agora</button>
             </div>
           </SwiperSlide>
         ))}

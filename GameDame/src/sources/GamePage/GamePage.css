@@ -2,10 +2,13 @@
   flex: 1;
   display: flex;
   flex-direction: row;
-  margin: 5%;
-  margin-top: 10%;
+  max-width: 100%;
+  width: 100%;
+  margin-top: 130px;
+  padding: 2rem 0;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 }
 
 .desconto{
@@ -16,7 +19,7 @@
   padding: 1.2% 0.3%;
   border-radius: 50%;
   position: relative;
-  top: -17rem;
+  bottom: 16rem;
   left: 2rem;
 }
 
@@ -29,8 +32,10 @@
   padding: 0 2%;
   background-color: #4B626C;
   border-radius: 0 10px 10px 0;
+  width: 100%;
   height: 500px;
   margin-bottom: 2rem;
+  box-sizing: border-box;
 }
 
 .game-contents .content-title{
@@ -45,9 +50,11 @@
   font-size: 1.5rem;
   font-weight: 300;
   text-align: center;
+  word-wrap: break-word;
 }
 
 .game-page .image-promo img{
+  max-width: 100%;
   height: 500px;
 }
 
@@ -108,4 +115,69 @@
   cursor: pointer;
   background-color: #4B626C;
   color: #FBF6F0;
+}
+
+@media (max-width: 1345px){
+  .game-page{
+    flex-direction: column; 
+    align-items: center; 
+  }
+
+  .game-contents{
+    height: auto;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    padding: 0 5%;
+    border-radius: 10px;
+  }
+
+  .game-contents .content-title{
+    font-size: 1.6rem;
+  }
+
+  .game-contents p{
+    font-size: 1.2rem;
+  }
+
+  .game-page .image-promo img{
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 0;
+  }
+
+  .game-contents .buttonscart button{
+    width: 100%;
+    font-size: 1.2rem; 
+  }
+
+  .desconto{
+    font-size: 1.5rem;
+    top: -12rem;
+    left: 1rem; 
+  }
+}
+
+@media (max-width: 480px){
+  .game-page{
+    flex-direction: column; 
+    margin-top: 100px;
+  }
+
+  .game-contents .content-title{
+    font-size: 1.4rem; 
+  }
+
+  .game-contents p{
+    font-size: 1rem; 
+  }
+
+  .game-contents .buttonscart button{
+    font-size: 1rem;
+  }
+
+  .desconto{
+    font-size: 1.2rem; 
+    top: -9rem;
+    left: 1rem;
+  }
 }
